@@ -13,3 +13,6 @@ node_modules
 .eslintcache
 docs/.vitepress/dist
 docs/.vitepress/cache
+examples/puppet/pnpm-lock.yaml
+examples/puppet/pnpm-workspace.yaml
+examples/puppet/logs/wcf.txt

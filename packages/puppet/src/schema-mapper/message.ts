@@ -1,5 +1,5 @@
 import type * as PUPPET from 'wechaty-puppet'
-import type { WechatferryAgentDBMessage, WechatferryAgentEventMessage } from '@wechatferry/agent'
+import type { WechatferryAgentDBMessage, WechatferryAgentEventMessage } from '@atorber/agent'
 import type { PuppetMessage } from '../types'
 import { isRoomId } from '../utils'
 import { executeMessageParsers } from './parser'

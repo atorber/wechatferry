@@ -1,4 +1,4 @@
-import type { WechatferryAgentChatRoomMember } from '@wechatferry/agent'
+import type { WechatferryAgentChatRoomMember } from '@atorber/agent'
 
 export function mentionTextParser(message: string) {
   const mentionRegex = /@\[mention:([^\]]+)\]/g

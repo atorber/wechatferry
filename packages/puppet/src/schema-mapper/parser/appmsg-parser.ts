@@ -1,6 +1,6 @@
 import * as PUPPET from 'wechaty-puppet'
 import { log } from 'wechaty-puppet'
-import { WechatAppMessageType, type WxMsg } from '@wechatferry/core'
+import { WechatAppMessageType, type WxMsg } from '@atorber/core'
 import type { PuppetMessage } from '../../types'
 import { parseAppmsgMessagePayload } from '../../messages'
 import type { MessageParser, MessageParserContext } from './parser'

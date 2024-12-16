@@ -1,5 +1,5 @@
 {
-  "name": "@wechatferry/agent",
+  "name": "@atorber/agent",
   "type": "module",
   "version": "0.0.23",
   "description": "wcferry agent client",
@@ -44,8 +44,8 @@
     "dev": "unbuild --stub"
   },
   "dependencies": {
-    "@wechatferry/core": "workspace:*",
-    "@wechatferry/logger": "workspace:*",
+    "@atorber/core": "workspace:*",
+    "@atorber/logger": "workspace:*",
     "file-box": "^1.4.15",
     "knex": "^3.1.0",
     "zlib": "^1.0.5"

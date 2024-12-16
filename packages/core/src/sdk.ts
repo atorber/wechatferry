@@ -5,7 +5,7 @@ import koffi from 'koffi'
 import { dirname, join, resolve } from 'pathe'
 import type { MessageRecvDisposable } from '@rustup/nng'
 import { Socket } from '@rustup/nng'
-import { useLogger } from '@wechatferry/logger'
+import { useLogger } from '@atorber/logger'
 import type { WechatferrySDKOptions, WechatferrySDKUserOptions } from './types'
 import { wcf } from './proto/wcf'
 

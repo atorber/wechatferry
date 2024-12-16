@@ -1,4 +1,4 @@
-import type { WechatferryAgentChatRoom, WechatferryAgentChatRoomMember } from '@wechatferry/agent'
+import type { WechatferryAgentChatRoom, WechatferryAgentChatRoomMember } from '@atorber/agent'
 import type * as PUPPET from 'wechaty-puppet'
 
 export function wechatferryRoomToWechaty(contact: WechatferryAgentChatRoom): PUPPET.payloads.Room {

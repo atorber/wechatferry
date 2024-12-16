@@ -1,5 +1,5 @@
 import type { Storage, StorageValue } from 'unstorage'
-import type { WechatferryAgentChatRoom, WechatferryAgentChatRoomMember, WechatferryAgentContact, WechatferryAgentEventMessage } from '@wechatferry/agent'
+import type { WechatferryAgentChatRoom, WechatferryAgentChatRoomMember, WechatferryAgentContact, WechatferryAgentEventMessage } from '@atorber/agent'
 import type * as PUPPET from 'wechaty-puppet'
 import type { PrefixStorage } from './utils'
 import { createPrefixStorage } from './utils'

@@ -1,4 +1,4 @@
-import type { WechatferryAgentEventMessage } from '@wechatferry/agent'
+import type { WechatferryAgentEventMessage } from '@atorber/agent'
 import { log } from 'wechaty-puppet'
 import type * as PUPPET from 'wechaty-puppet'
 import type { WechatferryPuppet } from '../puppet'

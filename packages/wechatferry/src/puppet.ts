@@ -1,1 +1,1 @@
-export * from '@wechatferry/puppet'
+export * from '@atorber/puppet'

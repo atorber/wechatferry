@@ -1,4 +1,4 @@
-import { WechatMessageType, type WxMsg } from '@wechatferry/core'
+import { WechatMessageType, type WxMsg } from '@atorber/core'
 import * as PUPPET from 'wechaty-puppet'
 import { log } from 'wechaty-puppet'
 import type { PuppetMessage } from '../../types'

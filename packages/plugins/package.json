@@ -1,5 +1,5 @@
 {
-  "name": "@wechatferry/plugins",
+  "name": "@atorber/plugins",
   "type": "module",
   "version": "0.0.23",
   "description": "wechatferry plugins",
@@ -45,7 +45,7 @@
     "dev": "unbuild --stub"
   },
   "dependencies": {
-    "@wechatferry/core": "workspace:*",
+    "@atorber/core": "workspace:*",
     "dayjs": "^1.11.13",
     "file-box": "^1.4.15",
     "knex": "^3.1.0",

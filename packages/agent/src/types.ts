@@ -1,5 +1,5 @@
 import type { Buffer } from 'node:buffer'
-import type { UserInfo, Wechatferry, WxMsg } from '@wechatferry/core'
+import type { UserInfo, Wechatferry, WxMsg } from '@atorber/core'
 import type { parseBytesExtra } from './utils'
 
 export interface WechatferryAgentEventMap {
