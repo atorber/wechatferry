@@ -24,7 +24,7 @@ defineProps<{
         <a
           class="text-inherit! op50 hover:op100"
           flex="~ items-center gap-0.5"
-          :href="`https://github.com/wechatferry/wechatferry/tree/main/examples/${item.path}`" target="_blank"
+          :href="`https://github.com/atorber/wechatferry/tree/main/examples/${item.path}`" target="_blank"
         >
           <div i-carbon-logo-github />
           <span text-xs>源码</span>

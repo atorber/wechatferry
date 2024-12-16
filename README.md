@@ -21,11 +21,11 @@ pnpm add wechatferry
 
 |名称|描述|
 |---|---|
-|[@atorber/core](https://github.com/wechatferry/wechatferry/tree/main/packages/core)| 调用 sdk.dll 封装 tcp 连接 |
-|[@atorber/agent](https://github.com/wechatferry/wechatferry/tree/main/packages/agent)| 封装核心 更易于使用 |
-|[@atorber/puppet](https://github.com/wechatferry/wechatferry/tree/main/packages/puppet)| 让 Wechaty 免费协议重放荣光 |
-|[@atorber/nuxt](https://github.com/wechatferry/wechatferry/tree/main/packages/nuxt)| 使 Nuxt 轻松接入微信机器人 |
-|[@atorber/plugins](https://github.com/wechatferry/wechatferry/tree/main/packages/plugins)| 随便实现的几个插件 |
+|[@atorber/core](https://github.com/atorber/wechatferry/tree/main/packages/core)| 调用 sdk.dll 封装 tcp 连接 |
+|[@atorber/agent](https://github.com/atorber/wechatferry/tree/main/packages/agent)| 封装核心 更易于使用 |
+|[@atorber/puppet](https://github.com/atorber/wechatferry/tree/main/packages/puppet)| 让 Wechaty 免费协议重放荣光 |
+|[@atorber/nuxt](https://github.com/atorber/wechatferry/tree/main/packages/nuxt)| 使 Nuxt 轻松接入微信机器人 |
+|[@atorber/plugins](https://github.com/atorber/wechatferry/tree/main/packages/plugins)| 随便实现的几个插件 |
 
 ## 免责声明
 
@@ -83,8 +83,8 @@ wechatferry 之所以成为可能，得益于以下项目的灵感:
 [npm-downloads-src]: https://img.shields.io/npm/dw/wechatferry?style=flat&colorA=18181B&colorB=c62828
 [npm-downloads-href]: https://npmjs.com/package/wechatferry
 [github-stars-src]: https://img.shields.io/github/stars/wechatferry/wechatferry?style=flat&colorA=18181B&colorB=c62828
-[github-stars-href]: https://github.com/wechatferry/wechatferry
+[github-stars-href]: https://github.com/atorber/wechatferry
 [license-src]: https://img.shields.io/github/license/wechatferry/wechatferry.svg?style=flat&colorA=18181B&colorB=c62828
-[license-href]: https://github.com/wechatferry/wechatferry/blob/main/LICENSE
+[license-href]: https://github.com/atorber/wechatferry/blob/main/LICENSE
 [website-src]: https://img.shields.io/badge/文档-Wcferry-18181B?style=flat&colorA=18181B&colorB=c62828
 [website-href]: https://wcferry.netlify.app/

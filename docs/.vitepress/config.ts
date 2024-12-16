@@ -52,7 +52,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/wechatferry/wechatferry' },
+      { icon: 'github', link: 'https://github.com/atorber/wechatferry' },
     ],
   },
   markdown: {

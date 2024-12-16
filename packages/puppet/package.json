@@ -5,10 +5,10 @@
   "description": "wcferry puppet for wechaty",
   "author": "mrrhq <sanhua@himrr.com>",
   "license": "MIT",
-  "homepage": "https://github.com/wechatferry/wechatferry#readme",
+  "homepage": "https://github.com/atorber/wechatferry#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wechatferry/wechatferry"
+    "url": "https://github.com/atorber/wechatferry"
   },
   "keywords": [
     "wechat",

@@ -6,12 +6,12 @@
   "author": "mrrhq <sanhua@himrr.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/mrrhq",
-  "homepage": "https://github.com/wechatferry/wechatferry#readme",
+  "homepage": "https://github.com/atorber/wechatferry#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wechatferry/wechatferry"
+    "url": "https://github.com/atorber/wechatferry"
   },
-  "bugs": "https://github.com/wechatferry/wechatferry/issues",
+  "bugs": "https://github.com/atorber/wechatferry/issues",
   "keywords": [
     "wechat",
     "wcferry",

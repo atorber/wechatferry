@@ -13,7 +13,7 @@ hero:
       link: /guide
     - theme: alt
       text: GitHub
-      link: https://github.com/wechatferry/wechatferry
+      link: https://github.com/atorber/wechatferry
 
 features:
   - title: 全面集成 WechatFerry
