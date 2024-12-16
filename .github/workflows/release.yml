@@ -1,7 +1,10 @@
 name: Release
 
+# bridge分支的push事件触发
 on:
   push:
+    branches:
+      - bridge
     tags:
       - 'v*'
 
