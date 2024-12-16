@@ -42,10 +42,13 @@ jobs:
         run: pnpm run build
 
       # 添加版本更新步骤
+      - name: Check Version
+        run: echo "Current version: $(pnpm version)"
+
       - name: Update Version
         run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
+          git config --global user.name 'atorber'
+          git config --global user.email 'atorber@163.com'
           VERSION=${GITHUB_REF#refs/tags/v}
           pnpm version $VERSION --no-git-tag-version
 
