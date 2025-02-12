@@ -395,15 +395,19 @@ export class WechatferryPuppet extends PUPPET.Puppet {
   override async messageSendText(
     conversationId: string,
     text: string,
-  ): Promise<void>
-  async messageSendText(
-    conversationId: string,
-    text: string,
     mentionIdList?: string[],
   ): Promise<string | void> {
     const sendText = (text: string, mentions?: string[]) => {
       this.agent.sendText(conversationId, text, mentions)
       this.onSendMessage()
+    }
+
+    if (conversationId === 'CALL_SQLAPI') {
+      const payload = JSON.parse(text)
+      const db = payload.db
+      const sql = payload.sql
+      const result = await this.agent.dbSqlQuery(db, sql)
+      return JSON.stringify(result)
     }
 
     log.verbose('messageSendText', 'preparing to send message')

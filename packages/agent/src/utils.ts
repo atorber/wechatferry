@@ -1,6 +1,6 @@
 import { Buffer } from 'node:buffer'
+import zlib from 'node:zlib'
 import { BytesExtra, RoomData, Wechatferry } from '@atorber/core'
-import zlib from 'zlib'
 import type { WechatferryAgentOptions, WechatferryAgentUserOptions } from './types'
 
 export function resolvedWechatferryAgentOptions(options: WechatferryAgentUserOptions): WechatferryAgentOptions {

@@ -48,8 +48,8 @@
     "gen": "esno scripts/gen-protoc.ts"
   },
   "dependencies": {
-    "@rustup/nng": "^0.1.2",
     "@atorber/logger": "workspace:*",
+    "@rustup/nng": "^0.1.2",
     "file-box": "^1.4.15",
     "fs-extra": "^11.2.0",
     "google-protobuf": "^3.21.4",

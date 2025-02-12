@@ -1,7 +1,7 @@
 {
   "name": "@atorber/wechatferry",
   "type": "module",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "wechat robot framework based on wechatferry",
   "author": "mrrhq <sanhua@himrr.com>",
   "license": "MIT",
@@ -21,28 +21,28 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "default": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
     },
     "./agent": {
       "types": "./dist/agent.d.ts",
-      "default": "./dist/agent.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "default": "./dist/agent.mjs"
     },
     "./puppet": {
       "types": "./dist/puppet.d.ts",
-      "default": "./dist/puppet.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "default": "./dist/puppet.mjs"
     },
     "./plugins": {
       "types": "./dist/plugins.d.ts",
-      "default": "./dist/plugins.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "default": "./dist/plugins.mjs"
     },
     "./logger": {
       "types": "./dist/logger.d.ts",
-      "default": "./dist/logger.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "default": "./dist/logger.mjs"
     }
   },
   "main": "dist/index.mjs",

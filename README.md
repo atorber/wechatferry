@@ -6,26 +6,12 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![github stars][github-stars-src]][github-stars-href]
 [![License][license-src]][license-href]
-[![WebSite][website-src]][website-href]
-
->[!TIP]
-> 再一次让 Wechaty 免费协议(PC Hook)重放荣光 - [@atorber/puppet](https://wcferry.netlify.app/integrations/wechaty.html)
 
 ## 安装
 
 ```bash
 pnpm add wechatferry
 ```
-
-## Packages
-
-|名称|描述|
-|---|---|
-|[@atorber/core](https://github.com/atorber/wechatferry/tree/main/packages/core)| 调用 sdk.dll 封装 tcp 连接 |
-|[@atorber/agent](https://github.com/atorber/wechatferry/tree/main/packages/agent)| 封装核心 更易于使用 |
-|[@atorber/puppet](https://github.com/atorber/wechatferry/tree/main/packages/puppet)| 让 Wechaty 免费协议重放荣光 |
-|[@atorber/nuxt](https://github.com/atorber/wechatferry/tree/main/packages/nuxt)| 使 Nuxt 轻松接入微信机器人 |
-|[@atorber/plugins](https://github.com/atorber/wechatferry/tree/main/packages/plugins)| 随便实现的几个插件 |
 
 ## 免责声明
 
