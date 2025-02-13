@@ -10,7 +10,53 @@
 ## 安装
 
 ```bash
-pnpm add wechatferry
+pnpm add @atorber/wechatferry
+```
+
+## 拓展
+
+### 查询数据库
+
+向ID为@agent的微信发送消息，消息内容为JSON格式，包含payload和method字段。
+
+payload字段为数据库名称和SQL语句。
+
+method字段为方法名称。
+
+
+```ts
+import { WechatferryPuppet } from 'wechatferry/puppet'
+import { WechatyBuilder } from 'wechaty'
+import { useLogger } from 'wechatferry/logger'
+
+const logger = useLogger('puppet-example')
+
+const puppet = new WechatferryPuppet()
+const bot = WechatyBuilder.build({ puppet })
+
+bot.on('message', async (msg) => {
+  logger.info(JSON.stringify(msg, null, 2))
+  if (msg.text() === 'ding') { // 将逻辑表达式改为条件语句
+    msg.say('dong')
+  }
+  if (msg.text() === 'CALL_SQLAPI') {
+    const db = 'MSG0.db'
+    const sql = 'select * from MSG WHERE StrTalker = \"tyutluyc\" ORDER BY CreateTime DESC LIMIT 10;'
+    const payload = { db, sql }
+    const method = 'dbSqlQuery'
+    const text = JSON.stringify({ payload, method })
+    try {
+      const result = await bot.puppet.messageSendText('@agent', text)
+      logger.info(result)
+    } catch (error) {
+      logger.error(error)
+    }
+  }
+})
+  .start()
+  .then(() => logger.info('Bot started'))
+  .catch(console.error)
+
 ```
 
 ## 免责声明

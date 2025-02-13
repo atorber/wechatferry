@@ -402,12 +402,15 @@ export class WechatferryPuppet extends PUPPET.Puppet {
       this.onSendMessage()
     }
 
-    if (conversationId === 'CALL_SQLAPI') {
-      const payload = JSON.parse(text)
-      const db = payload.db
-      const sql = payload.sql
-      const result = await this.agent.dbSqlQuery(db, sql)
-      return JSON.stringify(result)
+    if (conversationId === '@agent') {
+      const params = JSON.parse(text)
+      const { payload, method } = params
+      if (method === 'dbSqlQuery') {
+        const result = await this.agent.dbSqlQuery(payload.db, payload.sql)
+        return JSON.stringify(result)
+      } else {
+        throw new Error(`Unsupported action: ${method}`)
+      }
     }
 
     log.verbose('messageSendText', 'preparing to send message')
