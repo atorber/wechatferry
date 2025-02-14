@@ -81,54 +81,59 @@ export class WechatferryPuppet extends PUPPET.Puppet {
     if (message.roomid && !message.sender) {
       message.sender = 'fmessage'
     }
-    await this.cacheManager.setMessage(messageId, message)
-    const event = await parseEvent(this, message)
-    const roomId = message.roomid
-    log.verbose('WechatferryPuppet', 'onMessage() event %s', JSON.stringify(EventType[event.type]))
-    log.verbose('WechatferryPuppet', 'onMessage() event %s', JSON.stringify(event.payload, null, 2))
-    switch (event.type) {
-      case EventType.Message: {
-        this.emit('message', { messageId })
-        break
-      }
-      case EventType.Post: {
-        this.emit('post', event.payload)
-        break
-      }
-      case EventType.Friendship: {
-        const friendship: PUPPET.payloads.Friendship = event.payload
-        await this.cacheManager.setFriendship(messageId, friendship)
-        this.emit('friendship', {
-          friendshipId: messageId,
-        })
-        break
-      }
-      case EventType.RoomInvite: {
-        await this.cacheManager.setRoomInvitation(messageId, event.payload)
-        this.emit('room-invite', {
-          roomInvitationId: messageId,
-        })
-        break
-      }
-      case EventType.RoomJoin: {
-        this.emit('room-join', event.payload)
-        // DO NOT UPDATE LISTS HERE
-        break
-      }
 
-      case EventType.RoomLeave: {
-        const payload = event.payload as PUPPET.payloads.EventRoomLeave
-        this.emit('room-leave', payload)
-        for (const memberId of payload.removeeIdList) {
-          await this.cacheManager.deleteRoomMember(roomId, memberId)
+    try {
+      await this.cacheManager.setMessage(messageId, message)
+      const event = await parseEvent(this, message)
+      const roomId = message.roomid
+      log.verbose('WechatferryPuppet', 'onMessage() event %s', JSON.stringify(EventType[event.type]))
+      log.verbose('WechatferryPuppet', 'onMessage() event %s', JSON.stringify(event.payload, null, 2))
+      switch (event.type) {
+        case EventType.Message: {
+          this.emit('message', { messageId })
+          break
         }
-        break
+        case EventType.Post: {
+          this.emit('post', event.payload)
+          break
+        }
+        case EventType.Friendship: {
+          const friendship: PUPPET.payloads.Friendship = event.payload
+          await this.cacheManager.setFriendship(messageId, friendship)
+          this.emit('friendship', {
+            friendshipId: messageId,
+          })
+          break
+        }
+        case EventType.RoomInvite: {
+          await this.cacheManager.setRoomInvitation(messageId, event.payload)
+          this.emit('room-invite', {
+            roomInvitationId: messageId,
+          })
+          break
+        }
+        case EventType.RoomJoin: {
+          this.emit('room-join', event.payload)
+          // DO NOT UPDATE LISTS HERE
+          break
+        }
+  
+        case EventType.RoomLeave: {
+          const payload = event.payload as PUPPET.payloads.EventRoomLeave
+          this.emit('room-leave', payload)
+          for (const memberId of payload.removeeIdList) {
+            await this.cacheManager.deleteRoomMember(roomId, memberId)
+          }
+          break
+        }
+        case EventType.RoomTopic: {
+          this.emit('room-topic', event.payload)
+          this.updateRoomCache(roomId)
+          break
+        }
       }
-      case EventType.RoomTopic: {
-        this.emit('room-topic', event.payload)
-        this.updateRoomCache(roomId)
-        break
-      }
+    } catch (error) {
+      log.error('WechatferryPuppet', 'onMessage() error %s', error)
     }
   }
 
