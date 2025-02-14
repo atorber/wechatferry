@@ -41,7 +41,7 @@ bot.on('message', async (msg) => {
   }
   if (msg.text() === 'CALL_SQLAPI') {
     const db = 'MSG0.db'
-    const sql = 'select * from MSG WHERE StrTalker = \"tyutluyc\" ORDER BY CreateTime DESC LIMIT 10;'
+    const sql = 'select * from MSG WHERE StrTalker = \"ledongmao\" ORDER BY CreateTime DESC LIMIT 10;'
     const payload = { db, sql }
     const method = 'dbSqlQuery'
     const text = JSON.stringify({ payload, method })
