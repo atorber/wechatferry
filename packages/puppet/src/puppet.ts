@@ -975,6 +975,8 @@ export class WechatferryPuppet extends PUPPET.Puppet {
       const contactInfo = contact as unknown as PuppetContact
       if (contactsDict[contact.userName]) {
         contactInfo.friend = [1, 3].includes(contactsDict[contact.userName].Type)
+      } else {
+        contactInfo.friend = false
       }
       return contactInfo as unknown as WechatferryAgentContact
     })

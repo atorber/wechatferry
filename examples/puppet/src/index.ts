@@ -25,6 +25,12 @@ bot.on('message', async (msg) => {
       logger.error(error)
     }
   }
+
+  if (msg.text() === 'ALL_CONTACT') {
+    const contactList = await bot.Contact.findAll()
+    logger.info(JSON.stringify(contactList, null, 2))
+    logger.info(`共有${contactList.length}个联系人`)
+  }
 })
   .start()
   .then(() => logger.info('Bot started'))

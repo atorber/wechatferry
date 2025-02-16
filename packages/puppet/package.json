@@ -1,7 +1,7 @@
 {
   "name": "@atorber/puppet",
   "type": "module",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "wcferry puppet for wechaty",
   "author": "mrrhq <sanhua@himrr.com>",
   "license": "MIT",
