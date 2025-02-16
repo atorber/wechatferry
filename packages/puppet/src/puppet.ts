@@ -26,6 +26,7 @@ export class WechatferryPuppet extends PUPPET.Puppet {
   agent: WechatferryAgent
   private cacheManager: CacheManager
   private heartBeatTimer?: ReturnType<typeof setTimeout>
+  private contactStore: Record<string, PuppetContact> = {}
 
   constructor(options: PuppetWcferryUserOptions = {}) {
     super()
@@ -51,7 +52,8 @@ export class WechatferryPuppet extends PUPPET.Puppet {
     log.verbose('WechatferryPuppet', 'login(%s)', userId)
     await this.loadContactList()
     await this.loadRoomList()
-    const user = await this.updateContactCache(userId)
+    const user = await this.updateContactCache(userId) as WechatferryAgentContact
+    this.contactStore[userId] = wechatferryContactToWechaty(user)
     if (!user) {
       throw new Error(
         `login(${userId}) called failed: User not found.`,
@@ -238,7 +240,8 @@ export class WechatferryPuppet extends PUPPET.Puppet {
 
   override async contactList(): Promise<string[]> {
     log.verbose('WechatferryPuppet', 'contactList()')
-    return this.cacheManager.getContactIds()
+    const contactIds = Object.keys(this.contactStore)
+    return contactIds
   }
 
   override async contactAvatar(contactId: string): Promise<FileBoxInterface>
@@ -261,11 +264,11 @@ export class WechatferryPuppet extends PUPPET.Puppet {
   override async contactRawPayload(id: string): Promise<WechatferryAgentContact | null> {
     log.verbose('WechatferryPuppet', 'contactRawPayload(%s)', id)
 
-    const contact = await this.cacheManager.getContact(id)
+    const contact = this.contactStore[id]
     if (!contact) {
       return this.updateContactCache(id)
     }
-    return contact
+    return wechatyContactToWechatferry(contact)
   }
 
   // #endregion
@@ -972,14 +975,16 @@ export class WechatferryPuppet extends PUPPET.Puppet {
 
     // 标记好友联系人
     const contactList = contacts.map(contact => {
-      const contactInfo = contact as unknown as PuppetContact
+      const contactInfo = wechatferryContactToWechaty(contact)
       if (contactsDict[contact.userName]) {
         contactInfo.friend = [1, 3].includes(contactsDict[contact.userName].Type)
       } else {
         contactInfo.friend = false
       }
-      return contactInfo as unknown as WechatferryAgentContact
+      this.contactStore[contactInfo.id] = contactInfo
+      return contact
     })
+
     return this.cacheManager.setContactList(contactList)
   }
 
