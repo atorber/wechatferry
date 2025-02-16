@@ -961,7 +961,24 @@ export class WechatferryPuppet extends PUPPET.Puppet {
 
     const contacts = this.agent.getContactList()
     log.verbose('WechatferryPuppet', `loadContactList: contacts ${contacts.length}`)
-    return this.cacheManager.setContactList(contacts)
+
+    const db = 'MicroMsg.db'
+    const sql = 'SELECT * FROM Contact WHERE Type=1 OR Type=3'
+    const contactsFromDB: { Type: number, UserName: string }[] = await this.agent.dbSqlQuery(db, sql)
+    const contactsDict: Record<string, { Type: number }> = {}
+    for (const contact of contactsFromDB) {
+      contactsDict[contact.UserName] = contact
+    }
+
+    // 标记好友联系人
+    const contactList = contacts.map(contact => {
+      const contactInfo = contact as unknown as PuppetContact
+      if (contactsDict[contact.userName]) {
+        contactInfo.friend = [1, 3].includes(contactsDict[contact.userName].Type)
+      }
+      return contactInfo as unknown as WechatferryAgentContact
+    })
+    return this.cacheManager.setContactList(contactList)
   }
 
   private async loadRoomList() {
