@@ -1,4 +1,4 @@
-import { WechatferryAgent } from '@wechatferry/agent'
+import { WechatferryAgent } from '@atorber/agent'
 import { useRuntimeConfig } from 'nitropack/runtime'
 
 let agent: WechatferryAgent

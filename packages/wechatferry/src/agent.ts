@@ -1,1 +1,1 @@
-export * from '@wechatferry/agent'
+export * from '@atorber/agent'

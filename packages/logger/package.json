@@ -1,5 +1,5 @@
 {
-  "name": "@wechatferry/logger",
+  "name": "@atorber/logger",
   "type": "module",
   "version": "0.0.26",
   "description": "wcferry logger",

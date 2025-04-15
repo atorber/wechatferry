@@ -1,5 +1,5 @@
 import { Buffer } from 'node:buffer'
-import { BytesExtra, RoomData, Wechatferry } from '@wechatferry/core'
+import { BytesExtra, RoomData, Wechatferry } from '@atorber/core'
 import type { WechatferryAgentOptions, WechatferryAgentUserOptions } from './types'
 
 export function resolvedWechatferryAgentOptions(options: WechatferryAgentUserOptions): WechatferryAgentOptions {

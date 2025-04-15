@@ -2,8 +2,8 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
 import { version } from "../package.json"
 import type { WechatyInterface } from 'wechaty/impls'
-import { WechatferryAgent } from "@wechatferry/agent";
-import { isRoomId, wechatferryDBMessageToWechaty, WechatferryPuppet } from "@wechatferry/puppet";
+import { WechatferryAgent } from "@atorber/agent";
+import { isRoomId, wechatferryDBMessageToWechaty, WechatferryPuppet } from "@atorber/puppet";
 
 interface WechatFerryServerOptions {
     wechaty: WechatyInterface

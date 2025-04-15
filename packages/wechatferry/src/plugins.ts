@@ -1,1 +1,1 @@
-export * from '@wechatferry/plugins'
+export * from '@atorber/plugins'

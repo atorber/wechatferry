@@ -1,5 +1,5 @@
 {
-  "name": "@wechatferry/mcp",
+  "name": "@atorber/mcp",
   "type": "module",
   "version": "0.0.26",
   "description": "A mcp server impl of wcferry",
@@ -52,9 +52,9 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.9.0",
-    "@wechatferry/logger": "workspace:*",
-    "@wechatferry/puppet": "workspace:*",
-    "@wechatferry/agent": "workspace:*",
+    "@atorber/logger": "workspace:*",
+    "@atorber/puppet": "workspace:*",
+    "@atorber/agent": "workspace:*",
     "wechaty": "^1.20.2",
     "zod": "^3.24.2"
   }

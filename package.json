@@ -1,5 +1,5 @@
 {
-  "name": "@wechatferry/monorepo",
+  "name": "@atorber/monorepo",
   "type": "module",
   "version": "0.0.26",
   "private": true,

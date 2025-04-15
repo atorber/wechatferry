@@ -113,10 +113,10 @@ importers:
 
   packages/agent:
     dependencies:
-      '@wechatferry/core':
+      '@atorber/core':
         specifier: workspace:*
         version: link:../core
-      '@wechatferry/logger':
+      '@atorber/logger':
         specifier: workspace:*
         version: link:../logger
       file-box:
@@ -131,7 +131,7 @@ importers:
       '@rustup/nng':
         specifier: ^0.1.2
         version: 0.1.2
-      '@wechatferry/logger':
+      '@atorber/logger':
         specifier: workspace:*
         version: link:../logger
       file-box:
@@ -168,13 +168,13 @@ importers:
       '@modelcontextprotocol/sdk':
         specifier: ^1.9.0
         version: 1.9.0
-      '@wechatferry/agent':
+      '@atorber/agent':
         specifier: workspace:*
         version: link:../agent
-      '@wechatferry/logger':
+      '@atorber/logger':
         specifier: workspace:*
         version: link:../logger
-      '@wechatferry/puppet':
+      '@atorber/puppet':
         specifier: workspace:*
         version: link:../puppet
       wechaty:
@@ -192,10 +192,10 @@ importers:
       '@nuxt/kit':
         specifier: ^3.16.0
         version: 3.16.0(magicast@0.3.5)
-      '@wechatferry/plugins':
+      '@atorber/plugins':
         specifier: workspace:*
         version: link:../plugins
-      '@wechatferry/puppet':
+      '@atorber/puppet':
         specifier: workspace:*
         version: link:../puppet
       fast-glob:
@@ -275,7 +275,7 @@ importers:
 
   packages/plugins:
     dependencies:
-      '@wechatferry/core':
+      '@atorber/core':
         specifier: workspace:*
         version: link:../core
       dayjs:
@@ -305,10 +305,10 @@ importers:
 
   packages/puppet:
     dependencies:
-      '@wechatferry/agent':
+      '@atorber/agent':
         specifier: workspace:*
         version: link:../agent
-      '@wechatferry/core':
+      '@atorber/core':
         specifier: workspace:*
         version: link:../core
       file-box:
@@ -336,7 +336,7 @@ importers:
 
   packages/robot:
     dependencies:
-      '@wechatferry/nuxt':
+      '@atorber/nuxt':
         specifier: workspace:*
         version: link:../nuxt
       bullmq:
@@ -352,19 +352,19 @@ importers:
 
   packages/wechatferry:
     dependencies:
-      '@wechatferry/agent':
+      '@atorber/agent':
         specifier: workspace:*
         version: link:../agent
-      '@wechatferry/core':
+      '@atorber/core':
         specifier: workspace:*
         version: link:../core
-      '@wechatferry/logger':
+      '@atorber/logger':
         specifier: workspace:*
         version: link:../logger
-      '@wechatferry/plugins':
+      '@atorber/plugins':
         specifier: workspace:*
         version: link:../plugins
-      '@wechatferry/puppet':
+      '@atorber/puppet':
         specifier: workspace:*
         version: link:../puppet
 

@@ -35,7 +35,7 @@ wechatferry 提供了多种集成方式，如果你在用 [Nuxt](https://nuxt.co
 
 ## 插件
 
-wechatferry 从 v0.0.9 之后将逐步实现有趣、常用、有用的基于 [Wechaty Plugins](https://wechaty.js.org/docs/using-plugin-with-wechaty/overview) 或 Proxy 的插件，这些插件会用于 [Wechaty](https://wechaty.js.org/) 或是对 [@wechatferry/puppet](https://www.jsdocs.io/package/@wechatferry/puppet) 的扩展
+wechatferry 从 v0.0.9 之后将逐步实现有趣、常用、有用的基于 [Wechaty Plugins](https://wechaty.js.org/docs/using-plugin-with-wechaty/overview) 或 Proxy 的插件，这些插件会用于 [Wechaty](https://wechaty.js.org/) 或是对 [@atorber/puppet](https://www.jsdocs.io/package/@atorber/puppet) 的扩展
 
 <ContentPlugins />
 

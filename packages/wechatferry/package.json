@@ -56,10 +56,10 @@
     "dev": "unbuild --stub"
   },
   "dependencies": {
-    "@wechatferry/agent": "workspace:*",
-    "@wechatferry/core": "workspace:*",
-    "@wechatferry/logger": "workspace:*",
-    "@wechatferry/plugins": "workspace:*",
-    "@wechatferry/puppet": "workspace:*"
+    "@atorber/agent": "workspace:*",
+    "@atorber/core": "workspace:*",
+    "@atorber/logger": "workspace:*",
+    "@atorber/plugins": "workspace:*",
+    "@atorber/puppet": "workspace:*"
   }
 }

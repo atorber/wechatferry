@@ -1,4 +1,4 @@
-import type { WechatferryAgentChatRoom, WechatferryAgentChatRoomMember, WechatferryAgentContact, WechatferryAgentEventMessage } from "@wechatferry/agent"
+import type { WechatferryAgentChatRoom, WechatferryAgentChatRoomMember, WechatferryAgentContact, WechatferryAgentEventMessage } from "@atorber/agent"
 import type * as PUPPET from 'wechaty-puppet'
 
 type MaybePromise<T> = T | Promise<T>;

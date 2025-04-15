@@ -1,6 +1,6 @@
 import { setTimeout as sleep } from 'node:timers/promises'
-import type { WechatferryAgentChatRoom, WechatferryAgentChatRoomMember, WechatferryAgentContact, WechatferryAgentEventMessage } from '@wechatferry/agent'
-import { WechatferryAgent } from '@wechatferry/agent'
+import type { WechatferryAgentChatRoom, WechatferryAgentChatRoomMember, WechatferryAgentContact, WechatferryAgentEventMessage } from '@atorber/agent'
+import { WechatferryAgent } from '@atorber/agent'
 import * as PUPPET from 'wechaty-puppet'
 import { createStorage } from 'unstorage'
 import { log } from 'wechaty-puppet'

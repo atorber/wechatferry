@@ -10,13 +10,13 @@
 
 ::: code-group
   ```bash [pnpm]
-  pnpm add -D @wechatferry/agent
+  pnpm add -D @atorber/agent
   ```
   ```bash [yarn]
-  yarn add -D @wechatferry/agent
+  yarn add -D @atorber/agent
   ```
   ```bash [npm]
-  npm install -D @wechatferry/agent
+  npm install -D @atorber/agent
   ```
 :::
 
@@ -24,7 +24,7 @@
 
 ::: code-group
 ```ts twoslash [index.ts]
-import { WechatferryAgent } from '@wechatferry/agent'
+import { WechatferryAgent } from '@atorber/agent'
 
 // 创建 agent 实例
 const agent = new WechatferryAgent()
@@ -39,7 +39,7 @@ agent.start()
 ```
 :::
 
-更多说明请阅读[API 参考](https://www.jsdocs.io/package/@wechatferry/agent)
+更多说明请阅读[API 参考](https://www.jsdocs.io/package/@atorber/agent)
 
 ## Core 和 SDK
 
@@ -51,23 +51,23 @@ Core 内置了 Socket 连接，并通过 SDK 直接与 dll 交互，同时还支
 
 ### Core
 
-如果你想要自己写常用操作，那么你也可以直接使用 core，其用法与 agent 几乎无异，更多请参考 [API 文档](https://www.jsdocs.io/package/@wechatferry/core)
+如果你想要自己写常用操作，那么你也可以直接使用 core，其用法与 agent 几乎无异，更多请参考 [API 文档](https://www.jsdocs.io/package/@atorber/core)
 
 ::: code-group
   ```bash [pnpm]
-  pnpm add -D @wechatferry/core
+  pnpm add -D @atorber/core
   ```
   ```bash [yarn]
-  yarn add -D @wechatferry/core
+  yarn add -D @atorber/core
   ```
   ```bash [npm]
-  npm install -D @wechatferry/core
+  npm install -D @atorber/core
   ```
 :::
 
 ::: code-group
 ```ts twoslash [index.ts]
-import { Wechatferry } from '@wechatferry/core'
+import { Wechatferry } from '@atorber/core'
 
 // 创建 wcf 实例
 const wcf = new Wechatferry()
@@ -82,7 +82,7 @@ wcf.start()
 ```
 :::
 
-更多说明请阅读[API 参考](https://www.jsdocs.io/package/@wechatferry/core)
+更多说明请阅读[API 参考](https://www.jsdocs.io/package/@atorber/core)
 
 ### SDK
 
@@ -90,7 +90,7 @@ wcf.start()
 
 ::: code-group
 ```ts twoslash [index.ts]
-import { WechatferrySDK } from '@wechatferry/core'
+import { WechatferrySDK } from '@atorber/core'
 
 // 创建 sdk 实例
 const sdk = new WechatferrySDK()
@@ -113,8 +113,8 @@ sdk.startRecvMessage()
 ```ts twoslash [mysdk.ts]
 import EventEmitter from 'node:events'
 import type { Buffer } from 'node:buffer'
-import type { WechatferrySDKEventMap, WechatferrySDKImpl } from '@wechatferry/core'
-import { wcf } from '@wechatferry/core'
+import type { WechatferrySDKEventMap, WechatferrySDKImpl } from '@atorber/core'
+import { wcf } from '@atorber/core'
 import { Socket } from '@rustup/nng'
 import type { MessageRecvDisposable } from '@rustup/nng'
 
@@ -162,4 +162,4 @@ const sdk = new MySDK()
 ```
 :::
 
-更多说明请阅读[API 参考](https://www.jsdocs.io/package/@wechatferry/core)
+更多说明请阅读[API 参考](https://www.jsdocs.io/package/@atorber/core)

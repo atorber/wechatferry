@@ -1,4 +1,4 @@
-import type { WechatferryAgentContact } from '@wechatferry/agent'
+import type { WechatferryAgentContact } from '@atorber/agent'
 import * as PUPPET from 'wechaty-puppet'
 import { isContactCorporationId, isContactOfficialId } from '../utils'
 

@@ -1,5 +1,5 @@
 import type { WechatyInterface } from 'wechaty/impls'
-import type { WechatferryPuppet } from '@wechatferry/puppet'
+import type { WechatferryPuppet } from '@atorber/puppet'
 import { defineNitroPlugin } from 'nitropack/runtime'
 import { useBotPuppet } from '../utils/useBotPuppet'
 import { useBot } from '../utils/useBot'

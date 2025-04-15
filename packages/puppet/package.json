@@ -1,5 +1,5 @@
 {
-  "name": "@wechatferry/puppet",
+  "name": "@atorber/puppet",
   "type": "module",
   "version": "0.0.26",
   "description": "wcferry puppet for wechaty",
@@ -41,8 +41,8 @@
     "dev": "unbuild --stub"
   },
   "dependencies": {
-    "@wechatferry/agent": "workspace:*",
-    "@wechatferry/core": "workspace:*",
+    "@atorber/agent": "workspace:*",
+    "@atorber/core": "workspace:*",
     "file-box": "^1.4.15",
     "knex": "^3.1.0",
     "p-retry": "^6.2.1",

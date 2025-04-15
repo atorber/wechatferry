@@ -1,6 +1,6 @@
-import type { WechatferryAgentEventMessage } from '@wechatferry/agent'
+import type { WechatferryAgentEventMessage } from '@atorber/agent'
 import * as PUPPET from 'wechaty-puppet'
-import { WechatMessageType } from '@wechatferry/core'
+import { WechatMessageType } from '@atorber/core'
 import type { WechatferryPuppet } from '../puppet'
 import { parseVerifyMessagePayload } from '../messages/verify'
 import type { EventPayload } from './events'

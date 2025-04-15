@@ -1,7 +1,7 @@
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { WechatFerryServer } from "."
 import { WechatyBuilder } from "wechaty";
-import { WechatferryPuppet } from "@wechatferry/puppet";
+import { WechatferryPuppet } from "@atorber/puppet";
 
 
 process.on('SIGINT', async () => {
